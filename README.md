@@ -3,6 +3,9 @@
 ## Final App
 ![Final App](./assets/final-app.png)
 
+## Empty App
+![Final App](./assets/empty-app-ui.png)
+
 ## Add Task Modal
 ![Add Task Modal](./assets/add-task-modal.png)
 
