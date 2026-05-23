@@ -7,6 +7,9 @@
 ![Add Task Modal](./assets/add-task-modal.png)
 
 ## Color Hex Code Reference
+![Color Reference](./assets/ui-color-hexcode.png)
+
+## Color Hex Code Reference 2
 ![Color Reference](./assets/dashboard-colors.png)
 
 
