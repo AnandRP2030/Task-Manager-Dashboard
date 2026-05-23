@@ -1,16 +1,13 @@
-
 .dashboard-container {
-    padding: 20px;
-    box-sizing: border-box;
-    min-height: 100vh;
-    width: 100%;
-    background: linear-gradient(
-        244deg,
-        #0B0F19 0%,
-        #131A26 100%
-    );
-    color: #F4F7FA;
-    font-family: sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(244deg,
+      #0B0F19 0%,
+      #131A26 100%);
+  color: #F4F7FA;
+  font-family: sans-serif;
+  padding: 20px;
 }
 
 /* Common classes  */
@@ -34,6 +31,10 @@
   align-items: center;
 }
 
+.flex-direction-column {
+  flex-direction: column;
+}
+
 /* colors */
 .gray-text {
   color: #a2a6ae;
@@ -43,4 +44,16 @@
 
 .sm-text {
   font-size: 14px;
+}
+
+.box-shadow {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.02),
+    0 10px 30px rgba(0,0,0,0.4);
+}
+
+.box-border {
+  border: 1px solid #1f2636;
+  padding-bottom: 50px;
+  box-sizing: border-box;
 }

@@ -1,0 +1,37 @@
+.progress-bar {
+    width: 40%;
+    border: 1px solid #1f2636;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 12px;
+    background: #1c252f;
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 35px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg,
+            #7c5cfc 0%,
+            #4f8cff 50%,
+            #2ecc71 100%);
+    box-shadow:
+        0 0 10px rgba(124, 92, 252, 0.5),
+        0 0 20px rgba(79, 140, 255, 0.25);
+}
+
+.progress-text {
+    margin-top: 35px;
+}
+
+.progress-text p {
+    margin: 0;
+}

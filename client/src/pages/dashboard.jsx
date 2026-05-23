@@ -4,7 +4,10 @@ import "./dashboard.css";
 export const Dashboard = () => {
     return (
         <div className="dashboard">
-            <Header />
+            <div className="header-container">
+                <Header />
+
+            </div>
         </div>
     )
 }

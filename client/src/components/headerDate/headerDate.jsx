@@ -32,7 +32,7 @@ export const HeaderDate = () => {
     const welcomeMsg = getWelcomeMsg();
 
     return (
-        <div>
+        <div className="header-date-container box-shadow">
             <div className="flex">
                 <div className="flex align-items-center calendar-icon"> 
                     <div className="icon-box">
@@ -43,8 +43,8 @@ export const HeaderDate = () => {
                     <p className="gray-text date"> {currDate.date}</p>
                     <p className="day"> {currDate.day} </p>
                 </div>
-
             </div>
+
             <div>
                 <p className="sm-text gray-text">{welcomeMsg}</p>
             </div>

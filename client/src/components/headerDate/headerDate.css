@@ -1,3 +1,10 @@
+.header-date-container  {
+    border: 1px solid #1f2636;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 .calendar-icon {
     font-size: 25px;
     color: #7452f5;
