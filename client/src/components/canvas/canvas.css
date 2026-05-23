@@ -1,0 +1,6 @@
+.canvas {
+    display: flex;
+    width: 98%;
+    gap: 30px;
+    margin: auto;
+}

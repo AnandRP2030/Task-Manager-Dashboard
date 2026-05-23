@@ -1,4 +1,11 @@
+:root {
+  --todo: #3B82F6;
+  --doing: #F59E0B;
+  --done: #22C55E;
+}
+
 body {
   padding: 0;
   margin: 0;
 }
+

@@ -9,3 +9,7 @@
     border-bottom: 1px solid #1f2636;
     padding: 20px 20px 50px 20px;
 }
+
+.canvas-container {
+    margin-top: 50px;
+}

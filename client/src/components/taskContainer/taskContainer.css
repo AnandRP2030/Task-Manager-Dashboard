@@ -1,0 +1,6 @@
+.taskContainer {
+    height: 620px;
+    max-height: 620px;
+    width: 33%;
+    border-radius: 10px;
+}
