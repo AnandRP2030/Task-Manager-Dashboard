@@ -1,7 +1,7 @@
 :root {
-  --todo: #3B82F6;
-  --doing: #F59E0B;
-  --done: #22C55E;
+  --todo: 59, 130, 246;
+  --doing: 245, 158, 11;
+  --done: 34, 197, 94;
 }
 
 body {

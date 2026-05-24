@@ -3,6 +3,7 @@ import { TASK_STATUS } from "../../constants/taskStatus";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faListUl } from "@fortawesome/free-solid-svg-icons";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
+import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
 
 import './canvas.css';
 
@@ -11,24 +12,27 @@ const taskUIArray = [
         id: 1,
         title: TASK_STATUS.TODO,
         description: "Tasks waiting to be started",
-        empty: "Tasks you add appear here.",
+        emptyText: "Tasks you add appear here.",
         icon: faInbox,
+        headerIcon: faInbox,
         color: "var(--todo)"
     },
     {
         id: 2,
         title: TASK_STATUS.DOING,
         description: "Tasks in progress",
-        empty: "Tasks you add and start will appear here.",
+        emptyText: "Tasks you add and start will appear here.",
         icon: faListUl,
+        headerIcon: faCircleDot,
         color: "var(--doing)"
     },
     {
         id: 3,
         title: TASK_STATUS.DONE,
         description: "Completed tasks",
-        empty: "Tasks you complete will appear here.",
+        emptyText: "Tasks you complete will appear here.",
         icon: faCircleCheck,
+        headerIcon: faCircleCheck,
         color: "var(--done)"
     },
 ]

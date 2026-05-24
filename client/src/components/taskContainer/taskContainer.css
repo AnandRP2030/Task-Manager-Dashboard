@@ -3,4 +3,41 @@
     max-height: 620px;
     width: 33%;
     border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.task-title-row {
+    gap: 16px;
+    font-size: 22px;
+}
+
+.task-title-row div span {
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.empty-container {
+    padding: 16px;
+    height: 400px;
+    width: 80%;
+    margin: auto;
+}
+
+.no-task-text {
+    font-size: 20px;
+}
+
+.empty-icon-box {
+    padding: 20px;
+}
+
+.empty-add-task-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
