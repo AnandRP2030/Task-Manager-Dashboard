@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './taskContainer.css';
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { TaskCard } from "../taskCard/taskCard";
 
 export const TaskContainer = (props) => {
     const { taskUI } = props;
@@ -25,9 +26,12 @@ export const TaskContainer = (props) => {
             </div>
             <p className="gray-text">{description}</p>
             <div>
-                <EmptyContainer emptyText={emptyText} icon={icon} color={color}/>
+                {/* <EmptyContainer emptyText={emptyText} icon={icon} color={color}/> */}
             </div>
 
+            <div className="task-cards-container">
+                <TaskCard />
+            </div>
             
             <div className="flex w-100 m-auto justify-content-center mt-20">
                 <button className="empty-add-task-btn" style={{
