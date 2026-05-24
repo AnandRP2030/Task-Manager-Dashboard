@@ -1,10 +1,12 @@
-.taskContainer {
-    height: 620px;
+.task-container {
+    height: 700px;
     max-height: 620px;
     width: 33%;
     border-radius: 10px;
     padding: 16px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .task-title-row {
@@ -17,6 +19,11 @@
     border-radius: 999px;
     font-weight: 600;
     font-size: 14px;
+}
+
+.task-cards-container {
+    overflow: auto;
+    height: 450px;
 }
 
 .empty-container {
@@ -34,10 +41,19 @@
     padding: 20px;
 }
 
-.empty-add-task-btn {
+.add-task-btn-container{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.add-task-btn {
     background: none;
     color: white;
     border: none;
     font-size: 20px;
     cursor: pointer;
 }
+

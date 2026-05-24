@@ -16,7 +16,7 @@ export const TaskBox = (props) => {
                 <FontAwesomeIcon icon={icon} color={color} fontSize={24}/>
             </div>
 
-            <p className="gray-text task-box-title">{title}</p>
+            <p className="primary-gray task-box-title">{title}</p>
             <strong style={{borderColor: color}}>
                 {value}
             </strong>

@@ -1,0 +1,14 @@
+.task-card {
+    position: relative;
+}
+
+.task-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.task-steps {
+    line-height: 1.7;
+    overflow: auto;
+    max-height: 160px;
+}

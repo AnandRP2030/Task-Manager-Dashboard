@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarDays, faClock } from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect } from "react";
 import './headerDate.css';
 
 const getCurrentDate = () => {
@@ -10,7 +11,11 @@ const getCurrentDate = () => {
         day: today.toLocaleDateString("en-US", {
             weekday: "long"
         }),
-        time: 0
+        time: today.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        })
     }
 }
 
@@ -21,15 +26,29 @@ const getWelcomeMsg = () => {
     }
 
     if (hour < 18) {
-        return "Good Afternoon!, Developer 🥱";
+        return "Good Afternoon!, Developer ☺️";
     }
 
     return "Good Evening!, Developer ☕";
 }
 
+const _1Sec = 1000;
+
 export const HeaderDate = () => {
-    const currDate = getCurrentDate();
+    const [currDate, setCurrDate] = useState(getCurrentDate());
     const welcomeMsg = getWelcomeMsg();
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrDate(getCurrentDate());
+        }, _1Sec);
+
+        // Cleanup
+        return () => {
+            clearInterval(interval);
+        }
+
+    }, [])
 
     return (
         <div className="header-date-container box-shadow">
@@ -40,13 +59,16 @@ export const HeaderDate = () => {
                     </div>
                 </div>
                 <div className="header-date">
-                    <p className="gray-text date"> {currDate.date}</p>
+                    <p className="primary-gray date"> {currDate.date}</p>
                     <p className="day"> {currDate.day} </p>
+                    <p className="time">
+                        <FontAwesomeIcon icon={faClock} /> {currDate.time} 
+                    </p>
                 </div>
             </div>
 
             <div>
-                <p className="sm-text gray-text">{welcomeMsg}</p>
+                <p className="fs-3 primary-gray mt-0">{welcomeMsg}</p>
             </div>
         </div>
     )

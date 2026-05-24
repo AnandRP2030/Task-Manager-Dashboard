@@ -25,8 +25,8 @@
     margin: 10px 0;
 }
 
-.header-date .date {
-    
+.header-date .time {
+    color: #7452f5;
 }
 
 .header-date .day {

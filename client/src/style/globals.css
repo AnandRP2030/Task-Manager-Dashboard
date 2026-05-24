@@ -1,5 +1,30 @@
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Entire scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Background track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scroll thumb */
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
