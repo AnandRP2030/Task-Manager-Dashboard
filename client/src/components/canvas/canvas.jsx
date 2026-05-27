@@ -37,11 +37,11 @@ const taskUIArray = [
     },
 ]
 
-export const Canvas = () => {
+export const Canvas = ({openModal}) => {
 
     return (
         <div className="canvas">
-            {taskUIArray.map((taskUI) => <TaskContainer key={taskUI.id} taskUI={taskUI}/>)}
+            {taskUIArray.map((taskUI) => <TaskContainer openModal={openModal} key={taskUI.id} taskUI={taskUI}/>)}
         </div>
     )
 }

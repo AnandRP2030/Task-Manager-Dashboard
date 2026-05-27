@@ -4,7 +4,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { TaskCard } from "../taskCard/taskCard";
 
 export const TaskContainer = (props) => {
-    const { taskUI } = props;
+    const { taskUI, openModal } = props;
     const { title, description, emptyText, icon, headerIcon, color } = taskUI;
     const count = 0;
     const isTasksEmpty = false;
@@ -43,7 +43,7 @@ export const TaskContainer = (props) => {
             <div className="add-task-btn-container">
                 <button className="add-task-btn" style={{
                     color: `rgb(${color})`
-                }}>
+                }} onClick={openModal}>
                     <FontAwesomeIcon icon={faPlus} />
                     Add Task
                 </button>
