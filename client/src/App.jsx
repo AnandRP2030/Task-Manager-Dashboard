@@ -4,7 +4,7 @@ import './App.css';
 function App() {
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container white-color">
       <Dashboard />
     </div>
   )
