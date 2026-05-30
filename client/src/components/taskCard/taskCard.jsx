@@ -42,8 +42,8 @@ export const TaskCard = () => {
 
             <div className='ml-1 task-steps'>
                 <p className="task-steps-title fs-5 my-0">Steps: </p>
-                    {steps.map((d) => {
-                        return <div className="flex cursor-pointer">
+                    {steps.map((d, i) => {
+                        return <div key={i} className="flex cursor-pointer">
                             <input type="checkbox" />
                             <div className="secondary-gray mt-1 fs-4"> {d} </div>
                         </div>

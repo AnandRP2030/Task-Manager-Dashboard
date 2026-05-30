@@ -10,12 +10,233 @@
 }
 
 .modal-container {
-    width: min(650px, 92vw);
+    width: min(720px, 92vw);
     max-height: 85vh;
-    overflow-y: auto;
     background: #071120;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: 20px;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.55),
+        0 0 30px rgba(59,130,246,.08);
     padding: 24px;
     font-family: sans-serif;
+}
+
+.task-modal {
+    width: min(720px, 92vw);
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.task-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.task-modal-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.task-modal-body {
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #ef4444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+}
+
+.form-group small {
+    margin-top: 6px;
+    color: #64748b;
+}
+
+.two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.steps-section {
+    margin-top: 10px;
+}
+
+.steps-header {
+    margin-bottom: 12px;
+}
+
+.steps-header label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.steps-container {
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.step-row {
+    display: grid;
+    grid-template-columns: 42px 1fr 42px;
+
+    gap: 10px;
+    align-items: center;
+}
+
+.step-number {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.step-row input {
+    width: 100%;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: white;
+    padding: 0 14px;
+    box-sizing: border-box;
+}
+
+.step-delete-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.step-delete-btn:hover {
+    background: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+
+/* add step  */
+.add-step-input-container {
+    flex-direction: row;
+    gap: 20px;
+
+
+}
+
+.add-step-input-container input {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.add-step-btn {
+    flex-shrink: 0;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #2563eb;
+    background: transparent;
+    color: #3b82f6;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.add-step-btn:hover {
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.task-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+    .two-column-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .task-modal-header h2 {
+        font-size: 1.5rem;
+    }
 }
