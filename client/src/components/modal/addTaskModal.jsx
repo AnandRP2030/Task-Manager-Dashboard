@@ -12,8 +12,8 @@ export const AddTaskModal = ({ onClose, addTask, currStage }) => {
         description: '',
         estimate: '',
         taskLink: '',
-        steps: [
-        ], 
+        steps: [], 
+        currStep: '',
         currStage: currStage
     });
 
@@ -60,6 +60,7 @@ export const AddTaskModal = ({ onClose, addTask, currStage }) => {
             estimate: '',
             taskLink: '',
             steps: [], 
+            currStep: '',
             currStage: currStage
         });
     }

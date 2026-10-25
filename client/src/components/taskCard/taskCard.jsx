@@ -3,7 +3,6 @@ import './taskCard.css';
 import { faClock, faLink } from '@fortawesome/free-solid-svg-icons';
 
 export const TaskCard = ({task}) => {
-    console.log('task', task)
     const taskCount = 1;
     const title = "";
     const description = "";
