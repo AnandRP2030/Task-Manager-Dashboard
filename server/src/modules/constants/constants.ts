@@ -1,0 +1,9 @@
+export const ERROR_CODES = {
+    UNIQUE_VIOLATION: '23505'
+}
+
+export const STATUS_CODES = {
+    SUCCESSFULLY_CRDATED: 201,
+    SUCCESS: 200,
+    SERVER_ERROR: 500
+}
