@@ -1,5 +1,6 @@
 import express from "express";
 import userRoutes from './modules/users/users.routes.js'
+import taskRoutes from "./modules/tasks/tasks.routes.js";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use('/api/users', userRoutes);
+app.use('/api/tasks', taskRoutes);
 
 
 export default app;

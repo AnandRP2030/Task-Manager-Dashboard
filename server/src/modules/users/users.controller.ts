@@ -12,11 +12,11 @@ export const createUser = async (req: Request, res: Response) => {
     const payloadRes = registerSchema.safeParse(req.body);
 
     if (!payloadRes.success) {
-        return res.status(400).json({
+        return res.status(STATUS_CODES.BAD_INPUT).json({
             error: 'Validation failed',
             issues: payloadRes.error.flatten()
         })
-    }
+    }   
     const { name, email } = payloadRes.data;
     const q = `INSERT INTO "User" (name, email) 
     VALUES ($1, $2)
@@ -24,7 +24,7 @@ export const createUser = async (req: Request, res: Response) => {
     try {
         const result = await pool.query(q, [name, email]);
 
-        return res.status(STATUS_CODES.SUCCESSFULLY_CRDATED).json({
+        return res.status(STATUS_CODES.SUCCESSFULLY_CREATED).json({
             message: "user created succesfully",
             data: result.rows[0]
         });
